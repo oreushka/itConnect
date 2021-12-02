@@ -22,3 +22,5 @@
 |          | typeOfTask | Тип задачи (расписание или таска) |
 |          | dateOfTask | Дата, на которую закрепляется, задача |
 |          | timeOfTask | Время задачи |
+
+[<img src="pics/bases.jpg" width="600"/>]()
