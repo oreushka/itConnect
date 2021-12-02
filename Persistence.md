@@ -3,10 +3,10 @@
 | Сущность | Свойство | Комментарий |
 | :---: | :---: | :---: |
 | Person | id | |
-|| email | |
-|| name | |
-|| surname | |
-|| password | |
+|^^| email | |
+|^^| name | |
+|^^| surname | |
+|^^| password | |
 | Guest | | |
 | Registered | | |
 | Students | | |
