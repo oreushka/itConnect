@@ -18,13 +18,20 @@
 
 ### Эскизы
 
-* Main [<img src="pics/main.jpg" width="600"/>]()
-* Create task [<img src="pics/createTask.jpg" width="600"/>]()
-* Edit task [<img src="pics/changeTask.jpg" width="600"/>]()
-* Authorization [<img src="pics/authorization" width="600"/>]()
-* Registration [<img src="pics/registration.jpg" width="600"/>]()
-* Student registration [<img src="pics/studentRegistration.jpg" width="600"/>]()
-* Profile [<img src="pics/profile.jpg" width="600"/>]()
+* Main 
+[<img src="pics/main.jpg" height="600"/>]()
+* Create task 
+[<img src="pics/createTask.jpg" height="600"/>]()
+* Edit task 
+[<img src="pics/changeTask.jpg" height="600"/>]()
+* Authorization 
+[<img src="pics/authorization" height="600"/>]()
+* Registration 
+[<img src="pics/registration.jpg" height="600"/>]()
+* Student registration 
+[<img src="pics/studentRegistration.jpg" height="600"/>]()
+* Profile 
+[<img src="pics/profile.jpg" height="600"/>]()
 
 ### Диаграма интерфейсов
 
