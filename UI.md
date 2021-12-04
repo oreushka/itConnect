@@ -32,7 +32,7 @@
 
 * Authorization 
 
-[<img src="pics/authorization" height="600"/>]()
+[<img src="pics/authorization.jpg" height="600"/>]()
 
 * Registration 
 
