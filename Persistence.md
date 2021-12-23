@@ -1,4 +1,4 @@
-[<img src="pics/persistence.png" width="600"/>]()
+[<img src="pics/persistence.jpg" width="600"/>]()
 
 | Сущность | Свойство | Комментарий |
 | :---: | :---: | :---: |
