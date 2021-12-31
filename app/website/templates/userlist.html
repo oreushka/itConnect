@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<h1 align="center"> Пользователи </h1>
+
+<div class="row row-cols-3">
+        {% for user in users %}
+        <div class="col">
+          <div class="card" style="width: 22rem;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0FyHfHLDPYF9nmSfI9SFNLkoTj3deM7GZ506fk1_sxcpjmU5wHyIWmUy0CXYxphUTwr4&usqp=CAU" class="card-img-top" alt="" width="200" height="250">
+            <div class="card-body">
+              <h5 class="card-title">{{user.first_name}}</h5>
+              <p class="card-text">
+                {{user.email}}
+              </p>
+              <a href="/user/{{user.id}}/delete" class="btn-close"></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+{%endblock%}

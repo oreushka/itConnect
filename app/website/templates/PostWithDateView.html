@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+
+<h1 align="center"> Все дела на сегодняшний день </h1>
+
+
+      <div class="row row-cols-3">
+              {% for note in today_notes %}
+              <div class="col">
+                <div class="card" style="width: 22rem;">
+                  <img src="http://www.xiaomi.kg/wp-content/uploads/2021/04/ezgif-3-2b0d37a4bf83.png" class="card-img-top" alt="" width="200" height="250">
+                  <div class="card-body">
+                    <h5 class="card-title">{{note.title}}</h5>
+                    <p class="card-text">
+                      {{note.data}}
+                    </p>
+                    <p class="card-text">
+                      {{note.date}}
+                    </p>
+                    <a href="/userpost/{{note.id}}/delete" class="btn-close"></a>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            <div align="center">
+            <a href="/" class="btn btn-primary btn-lg" >Домой!</a>
+            </div>
+{% endblock %}

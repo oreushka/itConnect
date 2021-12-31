@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+
+
+<h1 align="center"> Notes </h1>
+<ul class="list-group list-group-flush" id="notes">
+
+</ul>
+<form method="POST">
+  <div class="mb-3">
+  <label for="validationTextarea" class="form-label">Введи название!</label>
+  <textarea class="form-control is-invalid" name="title" id="title" placeholder="Введи название!" required></textarea>
+  <div class="valid-feedback">
+    Введи название!
+  </div>
+</div>
+  <label for="validationTextarea" class="form-label">Что ты планируешь делать?</label>
+  <textarea class="form-control is-valid" name="note" id="note" class="form-control" placeholder="что ты планируешь делать?">Отдохнуть!
+  </textarea>
+  <div class="mb-3">
+  <label for="validationTextarea" class="form-label">введи день/месяц/год, какого числа будет актуальна эта запись!</label>
+  <textarea class="form-control is-invalid" name="date" id="date" placeholder="Введи день/месяц/год через двоеточие!" required></textarea>
+  <div class="valid-feedback">
+    введи день/месяц/год, какого числа будет актуальна эта запись!
+  </div>
+</div>
+<div class="mb-3">
+  <label for="validationTextarea" class="form-label">Введи время, которое хочешь предоставить через двоеточие!</label>
+  <textarea class="form-control is-invalid" name="time" id="time" placeholder="Введи время, которое хочешь предоставить через двоеточие!" required></textarea>
+  <div class="valid-feedback">
+    Введи время, которое хочешь предоставить!
+  </div>
+</div>
+<div class="col-auto">
+  <button type="submit" class="btn btn-primary mb-3" name="Flag_every" value="1">Пусть повторяется каждую  неделю!</button>
+</div>
+<div class="col-auto">
+  <button type="submit" class="btn btn-primary mb-3" name="Flag_singl" value="1">Пусть будет только один раз!</button>
+</div>
+</form>
+<p align="center"> на сколько дней вперёд ты хочешь заглянуть? </p>
+
+<nav  aria-label="Page navigation example">
+  <ul class="pagination pagination-lg justify-content-center">
+    {% for i in range(7) %}
+    <li class="page-item"><a class="page-link" href="/userpost/{{i}}">{{i}}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<h1 align="center">Все запланированные дела </h1>
+
+<div class="row row-cols-3">
+        {% for note in user.notes %}
+        <div class="col">
+          <div class="card" style="width: 22rem;">
+            <img src="http://www.xiaomi.kg/wp-content/uploads/2021/04/ezgif-3-2b0d37a4bf83.png" class="card-img-top" alt="" width="200" height="250">
+            <div class="card-body">
+              <h5 class="card-title">{{note.title}}</h5>
+              <p class="card-text">
+                {{note.data}}
+              </p>
+              <p class="card-text">
+                {{note.date}}
+              </p>
+              <a href="/userpost/{{note.id}}/delete" class="btn-close"></a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+{% endblock %}
